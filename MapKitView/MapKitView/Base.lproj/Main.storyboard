@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapKitView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ckw-sV-udn">
+                                <rect key="frame" x="20" y="74" width="263" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlq-R5-hXc">
+                                <rect key="frame" x="303" y="74" width="91" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="EzC-O3-Z7I"/>
+                                    <constraint firstAttribute="height" constant="31" id="acT-Lo-CvR"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Pesquisar"/>
+                                <connections>
+                                    <action selector="Buscar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9il-lL-0Rh"/>
+                                </connections>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hfW-NG-1o8">
+                                <rect key="frame" x="20" y="138" width="374" height="694"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hfW-NG-1o8" secondAttribute="bottom" constant="30" id="0cN-DL-vbs"/>
+                            <constraint firstItem="ckw-sV-udn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2TM-FO-6dR"/>
+                            <constraint firstItem="ckw-sV-udn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="B4h-Pt-BUa"/>
+                            <constraint firstItem="hfW-NG-1o8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Q8C-tP-b4P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hlq-R5-hXc" secondAttribute="trailing" constant="20" id="k9s-0u-BgG"/>
+                            <constraint firstItem="hlq-R5-hXc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="mH1-un-2nU"/>
+                            <constraint firstItem="hlq-R5-hXc" firstAttribute="leading" secondItem="ckw-sV-udn" secondAttribute="trailing" constant="20" id="mkx-C6-CPQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hfW-NG-1o8" secondAttribute="trailing" constant="20" id="t87-9h-atu"/>
+                            <constraint firstItem="hfW-NG-1o8" firstAttribute="top" secondItem="ckw-sV-udn" secondAttribute="bottom" constant="30" id="xI9-Z6-71z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnEndereco" destination="hlq-R5-hXc" id="fCg-5g-Pno"/>
+                        <outlet property="mapView" destination="hfW-NG-1o8" id="FWq-fK-YL6"/>
+                        <outlet property="textEndereco" destination="ckw-sV-udn" id="AXE-sw-Oqu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13.043478260869566" y="27.455357142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
